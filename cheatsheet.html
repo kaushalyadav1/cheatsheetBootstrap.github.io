@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cheatsheet.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <title>Bootstrap Cheatsheet by Kaushal</title>
+    <style>
+
+            @keyframes fade-out {
+                0% { opacity: 0; }
+                50% { opacity: 0.8; }
+                100% { opacity: 1; }
+            }
+
+            ol{
+                animation: fade-out 2s;
+            }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <span class="logo"><img src="copy-icon-9.png" alt=""></span>
+        <div class="content center">
+            This Bootstrap Cheatsheet is For You!
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <ol>
+
+            <li><b>Include Bootstrap’s CSS : </b> <br>
+                <pre class="language-html"><code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"&gt;</code></pre>
+            </li> <br>
+
+            <li><b>Include Bootstrap’s JS : </b> <br>
+                <pre class="language-html"><code>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+            </li> <br>
+
+            <li><b>.container class : </b> <br>
+                The .container class provides a responsive fixed width container
+                <pre class="language-html"><code>&lt;div class="container"&gt;
+    &lt;h1&gt;Welcome to SpecBits&lt;/h1&gt;
+    &lt;p&gt;This is a software company.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </li> <br>
+
+            <li><b>.container-fluid class : </b> <br>
+                The .container-fluid class provides a full width container, spanning the entire width of the viewport
+                <pre class="language-html"><code>&lt;div class="container-fluid"&gt;
+    &lt;h1&gt;Welcome to SpecBits&lt;/h1&gt;
+    &lt;p&gt;This is a software company.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </li> <br>
+
+            <li><b>Container Padding : </b> <br>
+                By default, containers have 15px left and right padding, with no top or bottom padding. Therefore, we often use spacing utilities, such as extra padding and margins to make them look even better. For example, .pt-3 means "add a top padding of 16px":
+                <pre class="language-html"><code>&lt;div class="container pt-3"&gt;
+    &lt;h1&gt;Welcome to SpecBits&lt;/h1&gt;
+    &lt;p&gt;This is a software company.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </li> <br>
+
+            <li><b>Container Border and Color : </b> <br>
+                Other utilities, such as borders and colors, are also often used together with containers:
+                <pre class="language-html"><code>&lt;div class="container p-3 my-3 border"&gt;
+    &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;
+    &lt;p&gt;This container has a border and some extra padding and margins.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <pre class="language-html"><code>&lt;div class="container p-3 my-3 bg-success text-white"&gt;
+    &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;
+    &lt;p&gt;This container has a dark background color and a white text, and some extra padding and margins.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <pre class="language-html"><code>&lt;div class="container p-3 my-3 bg-primary text-white"&gt;
+    &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;
+    &lt;p&gt;This container has a blue background color and a white text, and some extra padding and margins.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </li> <br>
+
+            <li><b>Responsive Containers : </b> <br>
+                You can also use the .container-sm|md|lg|xl classes to create responsive containers. <br>
+                The max-width of the container will change on different screen sizes/viewports:
+                <pre class="language-html"><code>&lt;div class="container-sm border"&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Responsive Containers&lt;/h1&gt;
+        &lt;p&gt;Resize the browser window to see the effect.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <pre class="language-html"><code>&lt;div class="container-md mt-3 border"&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Responsive Containers&lt;/h1&gt;
+        &lt;p&gt;Resize the browser window to see the effect.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <pre class="language-html"><code>&lt;div class="container-lg mt-3 border"&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Responsive Containers&lt;/h1&gt;
+        &lt;p&gt;Resize the browser window to see the effect.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <pre class="language-html"><code>&lt;div class="container-xl mt-3 border"&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Responsive Containers&lt;/h1&gt;
+        &lt;p&gt;Resize the browser window to see the effect.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </li> <br>
+
+            <li><b>Bootstrap 5 Grid : </b> <br>
+                create a row (div class="row"). Then, add the desired number of columns (tags with appropriate .col-*-* classes). The first star (*) represents the responsiveness: sm, md, lg, xl or xxl, while the second star represents a number, which should add up to 12 for each row.
+                <pre class="language-html"><code>&lt;div class="row"&gt;
+    &lt;div class="col-*-*"&gt;1&lt;/div&gt;
+    &lt;div class="col-*-*"&gt;2&lt;/div&gt;
+&lt;/div&gt;</code></pre> <br>
+
+        instead of adding a number to each col, let bootstrap handle the layout, to create equal width columns: two "col" elements = 50% width to each col, while three cols = 33.33% width to each col. Four cols = 25% width, etc. You can also use .col-sm|md|lg|xl|xxl to make the columns responsive.
+                <pre class="language-html"><code>&lt;div class="row border"&gt;
+    &lt;div class="col border bg-success"&gt;1&lt;/div&gt;
+    &lt;div class="col border bg-danger"&gt;2&lt;/div&gt;
+    &lt;div class="col border bg-primary"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre> <br>
+
+        Responsive Columns
+                <pre class="language-html"><code>&lt;div class="row"&gt;
+    &lt;div class="col-sm-3 border bg-success"&gt;.col-sm-3&lt;/div&gt;
+    &lt;div class="col-sm-3 border bg-success"&gt;.col-sm-3&lt;/div&gt;
+    &lt;div class="col-sm-3 border bg-success"&gt;.col-sm-3&lt;/div&gt;
+    &lt;div class="col-sm-3 border bg-success"&gt;.col-sm-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Text/Typography : </b> <br>
+                You can also use .h1 to .h6 classes on other elements to make them behave as headings if you want:
+                <pre class="language-html"><code>&lt;p class="h1"&gt;h1 Bootstrap heading&lt;/p&gt;
+&lt;p class="h2"&gt;h2 Bootstrap heading&lt;/p&gt;
+&lt;p class="h3"&gt;h3 Bootstrap heading&lt;/p&gt;
+&lt;p class="h4"&gt;h4 Bootstrap heading&lt;/p&gt;
+&lt;p class="h5"&gt;h5 Bootstrap heading&lt;/p&gt;
+&lt;p class="h6"&gt;h6 Bootstrap heading&lt;/p&gt;</code></pre> <br>
+
+       <b>Display Headings : </b> <br>
+        Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight), and there are six classes to choose from: .display-1 to .display-6:
+                <pre class="language-html"><code>&lt;h1 class="display-1"&gt;Display 1&lt;/h1&gt;
+&lt;h1 class="display-2"&gt;Display 2&lt;/h1&gt;
+&lt;h1 class="display-3"&gt;Display 3&lt;/h1&gt;
+&lt;h1 class="display-4"&gt;Display 4&lt;/h1&gt;
+&lt;h1 class="display-5"&gt;Display 5&lt;/h1&gt;
+&lt;h1 class="display-6"&gt;Display 6&lt;/h1&gt;</code></pre> <br>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Colors : </b> <br> <br>
+                <b>Text Colors : </b> <br>
+                Bootstrap 5 has some contextual classes that can be used to provide "meaning through colors". <br><br>
+
+                The classes for text colors are: .text-muted, .text-primary, .text-success, .text-info, .text-warning, .text-danger, .text-secondary, .text-white, .text-dark, .text-body (default body color/often black) and .text-light:
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;h2&gt;Contextual Colors&lt;/h2&gt;
+    &lt;p&gt;Use the contextual classes to provide "meaning through colors":&lt;/p&gt;
+    &lt;p class="text-muted"&gt;This text is muted.&lt;/p&gt;
+    &lt;p class="text-primary"&gt;This text is important.&lt;/p&gt;
+    &lt;p class="text-success"&gt;This text indicates success.&lt;/p&gt;
+    &lt;p class="text-info"&gt;This text represents some information.&lt;/p&gt;
+    &lt;p class="text-warning"&gt;This text represents a warning.&lt;/p&gt;
+    &lt;p class="text-danger"&gt;This text represents danger.&lt;/p&gt;
+    &lt;p class="text-secondary"&gt;Secondary text.&lt;/p&gt;
+    &lt;p class="text-dark"&gt;This text is dark grey.&lt;/p&gt;
+    &lt;p class="text-body"&gt;Default body color (often black).&lt;/p&gt;
+    &lt;p class="text-light"&gt;This text is light grey (on white background).&lt;/p&gt;
+    &lt;p class="text-white"&gt;This text is white (on white background).&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                    <b>Note :-</b> You can also add 50% opacity for black or white text with the .text-black-50 or .text-white-50 classes: <br><br>
+
+       <b>Background Colors : </b> <br>
+       The classes for background colors are: .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark and .bg-light.
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;h2&gt;Contextual Backgrounds&lt;/h2&gt;
+    &lt;p&gt;Use the contextual background classes to provide "meaning through colors".&lt;/p&gt;
+    &lt;div class="bg-primary p-3"&gt;&lt;/div&gt;
+    &lt;div class="bg-success p-3"&gt;&lt;/div&gt;
+    &lt;div class="bg-info p-3"&gt;&lt;/div&gt;
+    &lt;div class="bg-warning p-3"&gt;&lt;/div&gt;
+    &lt;div class="bg-danger p-3"&gt;&lt;/div&gt;
+    &lt;div class="bg-secondary p-3"&gt;&lt;/div&gt;
+    &lt;div class="bg-dark p-3"&gt;&lt;/div&gt;
+    &lt;div class="bg-light p-3"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre> <br>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Tables : </b> <br> <br>
+                <b>Basic Table : </b> <br>
+                A basic Bootstrap 5 table has a light padding and horizontal dividers. <br><br>
+
+                The .table class adds basic styling to a table:
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;h2&gt;Basic Table&lt;/h2&gt;
+    &lt;p&gt;The .table class adds basic styling (light padding and horizontal dividers) to a table:&lt;/p&gt;            
+    &lt;table class="table"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Firstname&lt;/th&gt;
+                &lt;th&gt;Lastname&lt;/th&gt;
+                &lt;th&gt;Email&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Kaushal&lt;/td&gt;
+                &lt;td&gt;Jacker&lt;/td&gt;
+                &lt;td&gt;ykaushal638@gmail.com&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Kaushal&lt;/td&gt;
+                &lt;td&gt;Jacker&lt;/td&gt;
+                &lt;td&gt;ykaushal638@gmail.com&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Kaushal&lt;/td&gt;
+                &lt;td&gt;Jacker&lt;/td&gt;
+                &lt;td&gt;ykaushal638@gmail.com&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre> <br>
+                    
+       <b>Striped Rows : </b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;h2&gt;Striped Rows&lt;/h2&gt;
+    &lt;p&gt;The .table-striped class adds zebra-stripes to a table:&lt;/p&gt;            
+    &lt;table class="table table-striped"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Firstname&lt;/th&gt;
+                &lt;th&gt;Lastname&lt;/th&gt;
+                &lt;th&gt;Email&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Kaushal&lt;/td&gt;
+                &lt;td&gt;Jacker&lt;/td&gt;
+                &lt;td&gt;ykaushal638@gmail.com&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Kaushal&lt;/td&gt;
+                &lt;td&gt;Jacker&lt;/td&gt;
+                &lt;td&gt;ykaushal638@gmail.com&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Kaushal&lt;/td&gt;
+                &lt;td&gt;Jacker&lt;/td&gt;
+                &lt;td&gt;ykaushal638@gmail.com&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+    <b>Note :-</b> The <b>.table-bordered</b> class adds borders on all sides of the table and cells: <br> <br>
+    The <b>.table-hover</b> class adds a hover effect (grey background color) on table rows: <br> <br>
+    The <b>.table-dark</b> class adds a black background to the table: <br> <br>
+    Combine <b>.table-dark</b> and .table-striped to create a dark, striped table: <br> <br>
+    The <b>.table-hover</b> class adds a hover effect (grey background color) on table rows: <br> <br>
+    The <b>.table-borderless</b> class removes borders from the table:
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Images : </b> <br>
+
+                <pre class="language-html"><code>&lt;img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre"&gt;
+&lt;img src="cinqueterre.jpg" class="rounded-circle" alt="Cinque Terre"&gt;
+&lt;img src="cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre"&gt;</code></pre> <br>
+                    
+       <b>Aligning Images : </b> <br>
+                <pre class="language-html"><code>&lt;img src="paris.jpg" class="float-start" alt="Paris" width="304" height="236"&gt; 
+&lt;img src="paris.jpg" class="float-end" alt="Paris" width="304" height="236"&gt;</code></pre> <br>
+
+       <b>Centered Image : </b> <br>
+                <pre class="language-html"><code>&lt;img src="paris.jpg" class="mx-auto d-block" style="width:50%"&gt;</code></pre> <br>
+
+       <b>Responsive Images : </b> <br>
+                <pre class="language-html"><code>&lt;img class="img-fluid" src="ny.jpg" alt="New York"&gt;</code></pre>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Alerts : </b> <br> <br>
+                <b>Alerts </b>
+
+                <pre class="language-html"><code>&lt;div class="alert alert-success"&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; This alert box could indicate a successful or positive action.
+&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;
+    &lt;strong&gt;Info!&lt;/strong&gt; This alert box could indicate a neutral informative change or action.
+&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;
+    &lt;strong&gt;Warning!&lt;/strong&gt; This alert box could indicate a warning that might need attention.
+&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;
+    &lt;strong&gt;Danger!&lt;/strong&gt; This alert box could indicate a dangerous or potentially negative action.
+&lt;/div&gt;
+&lt;div class="alert alert-primary"&gt;
+    &lt;strong&gt;Primary!&lt;/strong&gt; Indicates an important action.
+&lt;/div&gt;
+&lt;div class="alert alert-secondary"&gt;
+    &lt;strong&gt;Secondary!&lt;/strong&gt; Indicates a slightly less important action.
+&lt;/div&gt;
+&lt;div class="alert alert-dark"&gt;
+    &lt;strong&gt;Dark!&lt;/strong&gt; Dark grey alert.
+&lt;/div&gt;
+&lt;div class="alert alert-light"&gt;
+    &lt;strong&gt;Light!&lt;/strong&gt; Light grey alert.
+&lt;/div&gt;</code></pre> <br>
+                    
+       <b>Alert Links : </b> <br>
+                <pre class="language-html"><code>&lt;div class="alert alert-success"&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;
+    &lt;strong&gt;Info!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;
+    &lt;strong&gt;Warning!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;
+    &lt;strong&gt;Danger!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class="alert alert-primary"&gt;
+    &lt;strong&gt;Primary!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class="alert alert-secondary"&gt;
+    &lt;strong&gt;Secondary!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class="alert alert-dark"&gt;
+    &lt;strong&gt;Dark!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class="alert alert-light"&gt;
+    &lt;strong&gt;Light!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+&lt;/div&gt;</code></pre> <br>
+
+       <b>Closing Alerts : </b> <br>
+                <pre class="language-html"><code>&lt;div class="alert alert-success alert-dismissible"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; This alert box could indicate a successful or positive action.
+&lt;/div&gt;
+&lt;div class="alert alert-info alert-dismissible"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Info!&lt;/strong&gt; This alert box could indicate a neutral informative change or action.
+&lt;/div&gt;
+&lt;div class="alert alert-warning alert-dismissible"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Warning!&lt;/strong&gt; This alert box could indicate a warning that might need attention.
+&lt;/div&gt;
+&lt;div class="alert alert-danger alert-dismissible"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Danger!&lt;/strong&gt; This alert box could indicate a dangerous or potentially negative action.
+&lt;/div&gt; 
+&lt;div class="alert alert-primary alert-dismissible"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Primary!&lt;/strong&gt; Indicates an important action.
+&lt;/div&gt;
+&lt;div class="alert alert-secondary alert-dismissible"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Secondary!&lt;/strong&gt; Indicates a slightly less important action.
+&lt;/div&gt;
+&lt;div class="alert alert-dark alert-dismissible"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Dark!&lt;/strong&gt; Dark grey alert.
+&lt;/div&gt;
+&lt;div class="alert alert-light alert-dismissible"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Light!&lt;/strong&gt; Light grey alert.
+&lt;/div&gt;</code></pre> <br>
+
+       <b>Animated Alerts : </b> <br>
+                <pre class="language-html"><code>&lt;div class="alert alert-success alert-dismissible fade show"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; This alert box could indicate a successful or positive action.
+&lt;/div&gt;
+&lt;div class="alert alert-info alert-dismissible fade show"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Info!&lt;/strong&gt; This alert box could indicate a neutral informative change or action.
+&lt;/div&gt;
+&lt;div class="alert alert-warning alert-dismissible fade show"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Warning!&lt;/strong&gt; This alert box could indicate a warning that might need attention.
+&lt;/div&gt;
+&lt;div class="alert alert-danger alert-dismissible fade show"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Danger!&lt;/strong&gt; This alert box could indicate a dangerous or potentially negative action.
+&lt;/div&gt;
+&lt;div class="alert alert-primary alert-dismissible fade show"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Primary!&lt;/strong&gt; Indicates an important action.
+&lt;/div&gt;
+&lt;div class="alert alert-secondary alert-dismissible fade show"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Secondary!&lt;/strong&gt; Indicates a slightly less important action.
+&lt;/div&gt;
+&lt;div class="alert alert-dark alert-dismissible fade show"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Dark!&lt;/strong&gt; Dark grey alert.
+&lt;/div&gt;
+&lt;div class="alert alert-light alert-dismissible fade show"&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;strong&gt;Light!&lt;/strong&gt; Light grey alert.
+&lt;/div&gt;</code></pre>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Buttons : </b> <br> <br>
+                <b>Button Styles</b> <br>
+                <pre class="language-html"><code>&lt;button type="button" class="btn"&gt;Basic&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;</code></pre> <br>
+                    
+       <b>Button Sizes : </b> <br>
+                <pre class="language-html"><code>&lt;button type="button" class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-md"&gt;Default&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;</code></pre> <br>
+
+       <b>Block Level Buttons: </b> <br>
+                <pre class="language-html"><code>&lt;div class="d-grid"&gt;
+    &lt;button type="button" class="btn btn-primary btn-block"&gt;Full-Width Button&lt;/button&gt;
+&lt;/div&gt;</code></pre> <br>
+
+       <b>Active/Disabled Buttons : </b> <br>
+                <pre class="language-html"><code>&lt;button type="button" class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary active"&gt;Active Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary" disabled&gt;Disabled Primary&lt;/button&gt;
+&lt;a href="#" class="btn btn-primary disabled"&gt;Disabled Link&lt;/a&gt;</code></pre> <br>
+
+       <b>Spinner Buttons : </b> <br> 
+                <pre class="language-html"><code>&lt;button class="btn btn-primary"&gt;
+    &lt;span class="spinner-border spinner-border-sm"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="btn btn-primary"&gt;
+    &lt;span class="spinner-border spinner-border-sm"&gt;&lt;/span&gt;
+    Loading..
+&lt;/button&gt;
+
+&lt;button class="btn btn-primary" disabled&gt;
+    &lt;span class="spinner-border spinner-border-sm"&gt;&lt;/span&gt;
+    Loading..
+&lt;/button&gt;
+
+&lt;button class="btn btn-primary" disabled&gt;
+    &lt;span class="spinner-grow spinner-grow-sm"&gt;&lt;/span&gt;
+    Loading..
+&lt;/button&gt;</code></pre>
+<b>Note :- </b> Use a (div) element with class .btn-group to create a button group: <br> <br>
+    Instead of applying button sizes to every button in a group, use class .btn-group-lg for a large button group or the .btn-group-sm for a small button group: <br> <br>
+    Use the class .btn-group-vertical to create a vertical button group:
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Cards : </b> <br> <br>
+                <b>Header and Footer</b> <br>
+                <pre class="language-html"><code>&lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;Content&lt;/div&gt;
+    &lt;div class="card-footer"&gt;Footer&lt;/div&gt;
+&lt;/div&gt; &lt;br&gt;</code></pre> <br>
+                    
+       <b>Titles, text, and links : </b> <br>
+                <pre class="language-html"><code>&lt;div class="card"&gt;
+&lt;div class="card-body"&gt;
+    &lt;h4 class="card-title"&gt;Card title&lt;/h4&gt;
+    &lt;p class="card-text"&gt;Some example text. Some example text.&lt;/p&gt;
+    &lt;a href="#" class="card-link"&gt;Card link&lt;/a&gt;
+    &lt;a href="#" class="card-link"&gt;Another link&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;br&gt;</code></pre> <br>
+
+       <b>Card Images : </b> <br>
+                <pre class="language-html"><code>&lt;div class="card" style="width:400px"&gt;
+    &lt;img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h4 class="card-title"&gt;John Doe&lt;/h4&gt;
+        &lt;p class="card-text"&gt;Some example text some example text. John Doe is an architect and engineer&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;See Profile&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre> <br>
+
+       <b>Card Image Overlays : </b> <br>
+                <pre class="language-html"><code>&lt;div class="card img-fluid" style="width:500px"&gt;
+    &lt;img class="card-img-top" src="copy-icon-vector-illustration.jpg" alt="Card image" style="width:100%"&gt;
+    &lt;div class="card-img-overlay"&gt;
+        &lt;h4 class="card-title"&gt;John Doe&lt;/h4&gt;
+        &lt;p class="card-text"&gt;Some example text some example text.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;See Profile&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Dropdowns : </b> <br> <br>
+                <b>Basic Dropdown</b> <br>
+                <pre class="language-html"><code>&lt;div class="dropdown"&gt;
+    &lt;button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"&gt;Dropdown button&lt;/button&gt;
+        &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;/div&gt;</code></pre> <br>
+                    
+       <b>Dropdown Divider : </b> <br>
+                <pre class="language-html"><code>&lt;div class="dropdown"&gt;
+    &lt;button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"&gt;Dropdown button&lt;/button&gt;
+        &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;/div&gt;</code></pre> <br>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Collapse : </b> <br> <br>
+                <b>Basic Collapsible</b> <br>
+                <pre class="language-html"><code>&lt;button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo"&gt;Simple collapsible&lt;/button&gt;
+    &lt;div id="demo" class="collapse"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    &lt;/div&gt;</code></pre> <br>
+                    
+       <b>Accordion : </b> <br>
+                <pre class="language-html"><code>&lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;
+        &lt;a class="btn" data-bs-toggle="collapse" href="#collapseOne"&gt;
+        Collapsible Group Item #1
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseOne" class="collapse show" data-bs-parent="#accordion"&gt;
+        &lt;div class="card-body"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;
+        &lt;a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo"&gt;
+        Collapsible Group Item #2
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseTwo" class="collapse" data-bs-parent="#accordion"&gt;
+        &lt;div class="card-body"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre> <br>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Navs : </b> <br> <br>
+                <b>Nav Menus</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;ul class="nav"&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre> <br>
+                    
+       <b>Toggleable / Dynamic Tabs: </b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;ul class="nav nav-tabs" role="tablist"&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link active" data-bs-toggle="tab" href="#"&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" data-bs-toggle="tab" href="#"&gt;Menu 1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" data-bs-toggle="tab" href="#"&gt;Menu 2&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre> <br>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Navbars : </b> <br> <br>
+                <b>Navbar Logo, Dropdown, Forms and Buttons</b> <br>
+                <pre class="language-html"><code>&lt;nav class="navbar navbar-expand-sm navbar-dark bg-dark"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;
+            &lt;img src="copy-icon-vector-illustration.jpg" alt="Logo" style="width:40px;" class="rounded-pill"&gt;
+        &lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="mynavbar"&gt;
+            &lt;ul class="navbar-nav me-auto"&gt;
+                &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item dropdown"&gt;
+                &lt;a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
+                &lt;ul class="dropdown-menu"&gt;
+                    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;A third link&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;form class="d-flex"&gt;
+                &lt;input class="form-control me-2" type="text" placeholder="Search"&gt;
+                &lt;button class="btn btn-primary" type="button"&gt;Search&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+                    <b>Note : </b>The .fixed-top class makes the navigation bar fixed at the top: <br><br>
+
+                    Use the .fixed-bottom class to make the navbar stay at the bottom of the page:
+            </li> <br>
+
+            <li><b>Bootstrap 5 Carousel : </b> <br> <br>
+                <b>Carousel / Slideshow</b> <br>
+                <pre class="language-html"><code>&lt;div id="demo" class="carousel slide" data-bs-ride="carousel"&gt;
+    &lt;div class="carousel-indicators"&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"&gt;&lt;/button&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="1"&gt;&lt;/button&gt;
+        &lt;button type="button" data-bs-target="#demo" data-bs-slide-to="2"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="carousel-inner"&gt;
+        &lt;div class="carousel-item active"&gt;
+            &lt;img src="178921.png" alt="Los Angeles" class="d-block" style="width:100%"&gt;
+            &lt;div class="carousel-caption"&gt;
+                &lt;h3&gt;Los Angeles&lt;/h3&gt;
+                &lt;p&gt;We had such a great time in LA!&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="copy-icon-9.png" alt="Chicago" class="d-block" style="width:100%"&gt;
+            &lt;div class="carousel-caption"&gt;
+                &lt;h3&gt;Chicago&lt;/h3&gt;
+                &lt;p&gt;Thank you, Chicago!&lt;/p&gt;
+            &lt;/div&gt; 
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="copy-icon-vector-illustration.jpg" alt="New York" class="d-block" style="width:100%"&gt;
+            &lt;div class="carousel-caption"&gt;
+                &lt;h3&gt;New York&lt;/h3&gt;
+                &lt;p&gt;We love the Big Apple!&lt;/p&gt;
+            &lt;/div&gt;  
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"&gt;
+        &lt;span class="carousel-control-prev-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"&gt;
+        &lt;span class="carousel-control-next-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Modal : </b> <br> <br>
+                <b>Modals</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;h3&gt;Fading Modal Example&lt;/h3&gt;
+    &lt;p&gt;Click on the button to open the modal.&lt;/p&gt;
+    &lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"&gt;Open modal&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="modal fade" id="myModal"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h4 class="modal-title"&gt;Modal Heading&lt;/h4&gt;
+                &lt;button type="button" class="btn-close" data-bs-dismiss="modal"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;div class="modal-body"&gt;
+                Modal body..
+            &lt;/div&gt;
+
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-danger" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <b>Notes :- </b>Change the size of the modal by adding the .modal-sm class for small modals (max-width 300px), <b>.modal-lg</b> class for large modals  (max-width 800px), or <b>.modal-xl</b> for extra large modals  (max-width 1140px). Default is 500px max-width. <br><br>
+
+    Add the size class to the (div) element with class <b>.modal-dialog:</b> <br><br>
+
+    If you want the modal to span the whole width and height of the page, use the <b>.modal-fullscreen class:</b> <br><br>
+
+    However, it is possible to only scroll inside the modal, instead of the page itself, by adding <b>.modal-dialog-scrollable</b> to <b>.modal-dialog:</b>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Flex : </b> <br> <br>
+                <b>Flexbox</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;div class="d-flex p-3 bg-secondary text-white"&gt;  
+        &lt;div class="p-2 bg-info"&gt;Flex item 1&lt;/div&gt;
+        &lt;div class="p-2 bg-warning"&gt;Flex item 2&lt;/div&gt;
+        &lt;div class="p-2 bg-primary"&gt;Flex item 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <b>Note :- </b>To create an inline flexbox container, use the <b>d-inline-flex</b> class: <br> <br>
+
+    <b>Horizontal Direction :- </b> Use <b>.flex-row</b> to display the flex items horizontally (side by side). This is default. <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;div class="d-flex flex-row bg-secondary mb-3"&gt;
+        &lt;div class="p-2 bg-info"&gt;Flex item 1&lt;/div&gt;
+        &lt;div class="p-2 bg-warning"&gt;Flex item 2&lt;/div&gt;
+        &lt;div class="p-2 bg-primary"&gt;Flex item 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt; </code></pre>
+
+    Tip: Use <b>.flex-row-reverse</b> to right-align the horizontal direction: <br> <br>
+    <b>Note :- </b><b>Vertical Direction </b> Use <b>.flex-column</b> to display the flex items vertically (on top of each other), or <b>.flex-column-reverse</b> to reverse the vertical direction: <br><br>
+
+<b>Justify Content :- </b> Use the <b>.justify-content-*</b> classes to change the alignment of flex items. Valid classes are <b>start</b> (default), <b>end</b>, <b>center</b>, <b>between</b> or <b>around</b>:
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;div class="d-flex justify-content-start bg-secondary mb-3"&gt;
+        &lt;div class="p-2 bg-info"&gt;Flex item 1&lt;/div&gt;
+        &lt;div class="p-2 bg-warning"&gt;Flex item 2&lt;/div&gt;
+        &lt;div class="p-2 bg-primary"&gt;Flex item 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<b>Try this all by yourself :-</b> <br><br>
+
+<b>Fill / Equal Widths :- </b> Use <b>.flex-fill</b> on flex items to force them into equal widths: <br> <br>
+
+<b>Grow :- </b> Use <b>.flex-grow-1</b> on a flex item to take up the rest of the space. <br><br>
+
+Tip: Use <b>.flex-shrink-1 :- </b> on a flex item to make it shrink if necessary. <br><br>
+
+<b>Auto Margins :- </b> Easily add auto margins to flex items with <b>.ms-auto</b> (push items to the right), or by using <b>.me-auto</b> (push items to the left): <br><br>
+
+<b>Wrap :- </b> Control how flex items wrap in a flex container with <b>.flex-nowrap</b> (default), <b>.flex-wrap</b> or <b>.flex-wrap-reverse</b>. <br> <br>
+
+<b>Align Content :- </b> Control the vertical alignment of gathered flex items with the <b>.align-content-*</b> classes. Valid classes are <b>.align-content-start</b> (default), <b>.align-content-end</b>, <b>.align-content-center</b>, <b>.align-content-between</b>, <b>.align-content-around</b> and <b>.align-content-stretch</b> <br><br>
+
+<b>Align Items :- </b> Control the vertical alignment of single rows of flex items with the <b>.align-items-*</b> classes. Valid classes are <b>.align-items-start</b>, <b>.align-items-end</b>, <b>.align-items-center</b>, <b>.align-items-baseline</b>, and <b>.align-items-stretch</b> (default). <br><br>
+
+<b>Align Self :- </b> Control the vertical alignment of a specified flex item with the <b>.align-self-*</b> classes. Valid classes are <b>.align-self-start</b>, <b>.align-self-end</b>, <b>.align-self-center</b>, <b>.align-self-baseline</b>, and <b>.align-self-stretch</b> (default).
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Forms : </b> <br> <br>
+                <b>Stacked Form</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;form&gt;
+        &lt;div class="mb-3 mt-3"&gt;
+            &lt;label for="email"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" class="form-control" id="email" placeholder="Enter email" name="email"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label for="pwd"&gt;Password:&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd"&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check mb-3"&gt;
+            &lt;label class="form-check-label"&gt;
+            &lt;input class="form-check-input" type="checkbox" name="remember"&gt; Remember me
+            &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-3 mt-3"&gt;
+            &lt;label for="comment"&gt;Comments:&lt;/label&gt;
+            &lt;textarea class="form-control" rows="5" id="comment" name="text"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre> <br>
+
+                <b>Form Row/Grid (Inline Forms)</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;form&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col"&gt;
+                &lt;input type="text" class="form-control" placeholder="Enter email" name="email"&gt;
+            &lt;/div&gt;
+            &lt;div class="col"&gt;
+                &lt;input type="password" class="form-control" placeholder="Enter password" name="pswd"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre> <br>
+
+                <b>Disabled and Readonly</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;form&gt;
+        &lt;input type="text" class="form-control" placeholder="Normal input"&gt;
+        &lt;input type="text" class="form-control mt-3" placeholder="Disabled input" disabled&gt;
+        &lt;input type="text" class="form-control mt-3" placeholder="Readonly input" readonly&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+
+    <b>Notes :- </b>Use the <b>.form-control-plaintext</b> class to style an input field without borders, but keep proper marigins and padding: <br><br>
+
+    To style an input with type="color" properly, use the <b>.form-control-color class:</b>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Select : </b> <br> <br>
+                <b>Select Menu</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;form&gt;
+        &lt;label for="sel1" class="form-label"&gt;Select list (select one):&lt;/label&gt;
+        &lt;select class="form-select" id="sel1" name="sellist1"&gt;
+            &lt;option&gt;1&lt;/option&gt;
+            &lt;option&gt;2&lt;/option&gt;
+            &lt;option&gt;3&lt;/option&gt;
+            &lt;option&gt;4&lt;/option&gt;
+        &lt;/select&gt;
+        
+        &lt;label for="sel2" class="form-label"&gt;Mutiple select list (hold shift to select more than one):&lt;/label&gt;
+        &lt;select multiple class="form-select" id="sel2" name="sellist2"&gt;
+            &lt;option&gt;1&lt;/option&gt;
+            &lt;option&gt;2&lt;/option&gt;
+            &lt;option&gt;3&lt;/option&gt;
+            &lt;option&gt;4&lt;/option&gt;
+            &lt;option&gt;5&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre> <br>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Checkboxes and Radio buttons : </b> <br> <br>
+                <b>Checkboxes</b> <br>
+                <pre class="language-html"><code> &lt;div class="container mt-3"&gt;
+    &lt;h2&gt;Checkboxes&lt;/h2&gt;
+        &lt;form&gt;
+            &lt;div class="form-check"&gt;
+                &lt;input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked&gt;
+                &lt;label class="form-check-label" for="check1"&gt;Option 1&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="form-check"&gt;
+                &lt;input type="checkbox" class="form-check-input" id="check2" name="option2" value="something"&gt;
+                &lt;label class="form-check-label" for="check2"&gt;Option 2&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="form-check"&gt;
+                &lt;input type="checkbox" class="form-check-input" disabled&gt;
+                &lt;label class="form-check-label"&gt;Option 3&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary mt-3"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+&lt;/div&gt;</code></pre> <br>
+
+                <b>Radio buttons</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;h2&gt;Radio buttons&lt;/h2&gt;
+        &lt;form&gt;
+            &lt;div class="form-check"&gt;
+                &lt;input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked&gt;
+                &lt;label class="form-check-label" for="radio1"&gt;Option 1&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="form-check"&gt;
+                &lt;input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2"&gt;
+                &lt;label class="form-check-label" for="radio2"&gt;Option 2&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="form-check"&gt;
+                &lt;input type="radio" class="form-check-input" disabled&gt;
+                &lt;label class="form-check-label"&gt;Option 3&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary mt-3"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+&lt;/div&gt;</code></pre> <br>
+
+                <b>Toggle Switches</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;h2&gt;Toggle Switch&lt;/h2&gt;
+        &lt;form&gt;
+            &lt;div class="form-check form-switch"&gt;
+                &lt;input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked&gt;
+                &lt;label class="form-check-label" for="mySwitch"&gt;Dark Mode&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary mt-3"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Range : </b> <br> <br>
+                <b>Custom Range</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;form&gt;
+        &lt;label for="customRange" class="form-label"&gt;Custom range&lt;/label&gt;
+        &lt;input type="range" class="form-range" id="customRange" name="points"&gt;
+        
+        &lt;button type="submit" class="btn btn-primary mt-3"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+
+    <b>Note :- </b><b>Steps </b> By default, the interval between the range numbers is 1. You can change it by using the step attribute: <br><br>
+      <b>Min and Max :- </b>By default, the minimum value is 0 and maximum value is 100. You can use the min and/or max attribute change it:
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Input Groups : </b> <br> <br>
+                <b>Input Groups</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;form&gt;
+        &lt;label for="customRange" class="form-label"&gt;Custom range&lt;/label&gt;
+        &lt;input type="range" class="form-range" id="customRange" name="points"&gt;
+        
+        &lt;button type="submit" class="btn btn-primary mt-3"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+
+    <b>Note :- </b><b>Steps </b> By default, the interval between the range numbers is 1. You can change it by using the step attribute: <br><br>
+      <b>Min and Max :- </b>By default, the minimum value is 0 and maximum value is 100. You can use the min and/or max attribute change it:
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Form Floating Labels : </b> <br> <br>
+                <b>Floating Labels / Animated Labels / Textarea</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;form&gt;
+        &lt;div class="form-floating mb-3 mt-3"&gt;
+            &lt;input type="text" class="form-control" id="email" placeholder="Enter email" name="email"&gt;
+            &lt;label for="email"&gt;Email&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-floating mt-3 mb-3"&gt;
+            &lt;input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd"&gt;
+            &lt;label for="pwd"&gt;Password&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-floating mb-3 mt-3"&gt;
+            &lt;textarea class="form-control" id="comment" name="text" placeholder="Comment goes here"&gt;&lt;/textarea&gt;
+            &lt;label for="comment"&gt;Comments&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Form Validation : </b> <br> <br>
+                <b>Form Validation</b> <br>
+                <pre class="language-html"><code>&lt;div class="container mt-3"&gt;
+    &lt;form class="was-validated"&gt;
+        &lt;div class="mb-3 mt-3"&gt;
+            &lt;label for="uname" class="form-label"&gt;Username:&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required&gt;
+            &lt;div class="valid-feedback"&gt;Valid.&lt;/div&gt;
+            &lt;div class="invalid-feedback"&gt;Please fill out this field.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label for="pwd" class="form-label"&gt;Password:&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required&gt;
+            &lt;div class="valid-feedback"&gt;Valid.&lt;/div&gt;
+            &lt;div class="invalid-feedback"&gt;Please fill out this field.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check mb-3"&gt;
+            &lt;input class="form-check-input" type="checkbox" id="myCheck"  name="remember" required&gt;
+            &lt;label class="form-check-label" for="myCheck"&gt;I agree on blabla.&lt;/label&gt;
+            &lt;div class="valid-feedback"&gt;Valid.&lt;/div&gt;
+            &lt;div class="invalid-feedback"&gt;Check this checkbox to continue.&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;/div&gt;</code></pre>
+
+            </li> <br>
+
+            <li><b>Bootstrap 5 Offcanvas : </b> <br> <br>
+                <b>Offcanvas</b> <br>
+                <pre class="language-html"><code>&lt;div class="offcanvas offcanvas-start" id="demo"&gt;
+    &lt;div class="offcanvas-header"&gt;
+        &lt;h1 class="offcanvas-title"&gt;Heading&lt;/h1&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="offcanvas-body"&gt;
+        &lt;p&gt;Some text lorem ipsum.&lt;/p&gt;
+        &lt;p&gt;Some text lorem ipsum.&lt;/p&gt;
+        &lt;p&gt;Some text lorem ipsum.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    
+&lt;div class="container-fluid mt-3"&gt;
+    &lt;h3&gt;Offcanvas Sidebar&lt;/h3&gt;
+    &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"&gt;
+        Open Offcanvas Sidebar
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+            </li> <br>
+
+        </ol>
+
+        <footer>
+            <p style="color: gray;">Copyright &copy2023 specbits.com</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
